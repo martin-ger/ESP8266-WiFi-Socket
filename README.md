@@ -10,4 +10,9 @@ German DIY market OBI is selling a WiFi socket (look for item "OBI 2291706"). It
 You can nicly ready the names of the ESP pins on the daughter board:
 <img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/IMG_20180221_131028_s.jpg">
 
-Next step will be to find out which GPIO pins control the LEDs, the button and the relay and flash new SW on it. 
+It seems it has the following pin assignment:
+GPIO5  - Relay off (LOW pulse)
+GPIO12 - Relay on (LOW pulse)
+GPIO13 - Power LED
+GPIO14 - Push Button
+
