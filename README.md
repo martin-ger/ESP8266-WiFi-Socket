@@ -8,7 +8,7 @@ German DIY market OBI is selling a WiFi socket (look for item "OBI 2291706"). It
 ## Hardware
 <img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/IMG_20180221_130652_s.jpg">
 
-You can nicely ready the names of the ESP pins on the daughter board:
+You can nicely read the names of the ESP pins on the daughter board:
 <img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/IMG_20180221_131028_s.jpg">
 
 Soldering a pin header onto the board isn't abig deal (I first soldered it on straight and bend it down afterwards):
@@ -19,6 +19,7 @@ This even fits into the case when flashing is done:
 
 ## Flashing
 Flashing follows the usual procedure for the ESP:
+- Make sure you are DISCONNECTED from mains power (3,3V is enough)
 - Get your USB-UART adapter
 - Connect 3,3V, GND, Rx-Tx, Tx-Rx, GPIO0-GND
 - Power it up
