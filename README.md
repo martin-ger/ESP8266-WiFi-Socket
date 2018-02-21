@@ -55,7 +55,7 @@ set mqtt_host test.mosquitto.org
 ```
 Now you can send "0" or "1" MQTT messages to the topic @2/obiswitch/@1/command (in this example "myhome/obiswitch/0/command") and the switch will turn on and off. You can send the messages either to the given remote MQTT broker (in this example "test.mosquitto.org") or to the switch itself (use the IP of the switch). You might connect to the switch eiter via the home WiFi (in this example "MyWiFiSSID") or directly to the AP of the switch (in this example "MQTTbroker" with pw "stupidPassword").
 
-You can also toggle the stats locally using the button on the device.
+You can also toggle the status locally using the button on the device. The blue LED will start to blink as soon as the switch has WiFi connectivity.
 
 The retained topic @2/obiswitch/@1/status (in this example "myhome/obiswitch/0/status") will always report on the current state of the switch.
 
