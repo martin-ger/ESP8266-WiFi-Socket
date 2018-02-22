@@ -54,8 +54,6 @@ do
 
 	publish remote $status_topic $relay_status retained
 
-% Now the events, checked whenever something happens
-
 % Is there a remote command?
 on topic remote $command_topic
 do

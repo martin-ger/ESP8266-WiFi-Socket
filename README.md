@@ -112,8 +112,6 @@ do
 
 	publish remote $status_topic $relay_status retained
 
-% Now the events, checked whenever something happens
-
 % Is there a remote command?
 on topic remote $command_topic
 do
@@ -121,7 +119,6 @@ do
 
 	% republish this locally - this does the action
 	publish local $command_topic $this_data
-
 
 % Is there a local command?
 on topic local $command_topic
