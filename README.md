@@ -38,10 +38,11 @@ The device has the following pin assignment:
 - GPIO4 - blue WiFi LED
 - GPIO5  - Relay off (LOW pulse)
 - GPIO12 - Relay on (LOW pulse)
-- GPIO13 - red Power LED
 - GPIO14 - Push Button
 
-There is a sample script for my MQTT Broker/Bridge that turns the switch into an MQTT client and broker.
+In this repository you find a basic Arduino sketch that reads the pushbutton and connects to an MQTT server.
+
+There is also a sample script for my MQTT Broker/Bridge that turns the switch into an MQTT client and broker.
 
 On the CLI define the two flash variables @1 with the device number and @2 with the systems prefix and configure WiFi and the remote MQTT broker, e.g.:
 ```
@@ -62,6 +63,11 @@ The retained topic @2/obiswitch/@1/status (in this example "myhome/obiswitch/0/s
 This is the script for my MQTT Broker/Bridge (https://github.com/martin-ger/esp_mqtt):
 ```
 % Config params, overwrite any previous settings from the commandline
+config ap_ssid 		MQTTbroker
+config ap_password	stupidPassword
+config broker_user	Martin
+config broker_password	secret
+config mqtt_host	test.mosquitto.org
 config speed		160
 
 % Now the initialization, this is done once after booting
@@ -75,7 +81,6 @@ do
 
 	% Status of the relay
 	setvar $relay_status=0
-	gpio_out 13 not ($relay_status)
 
 	% Command topic
 	setvar $command_topic =$mqtt_prefix | "/obiswitch/" | $device_number | "/command"
@@ -120,6 +125,7 @@ do
 	% republish this locally - this does the action
 	publish local $command_topic $this_data
 
+
 % Is there a local command?
 on topic local $command_topic
 do
@@ -127,14 +133,11 @@ do
 
 	if $this_data = "1" then
 		setvar $relay_status = 1
-		gpio_out 13 not ($relay_status)
 		gpio_out 12 0
 		settimer 1 150
 	else
 	    if $this_data = "0" then
 		setvar $relay_status = 0
-		setvar $blink = 0
-		gpio_out 13 not ($relay_status)
 		gpio_out 5 0
 		settimer 1 150
 	    endif

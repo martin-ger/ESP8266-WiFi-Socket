@@ -17,7 +17,6 @@ do
 
 	% Status of the relay
 	setvar $relay_status=0
-	gpio_out 13 not ($relay_status)
 
 	% Command topic
 	setvar $command_topic =$mqtt_prefix | "/obiswitch/" | $device_number | "/command"
@@ -70,14 +69,11 @@ do
 
 	if $this_data = "1" then
 		setvar $relay_status = 1
-		gpio_out 13 not ($relay_status)
 		gpio_out 12 0
 		settimer 1 150
 	else
 	    if $this_data = "0" then
 		setvar $relay_status = 0
-		setvar $blink = 0
-		gpio_out 13 not ($relay_status)
 		gpio_out 5 0
 		settimer 1 150
 	    endif
