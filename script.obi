@@ -43,6 +43,8 @@ do
 on wifidisconnect
 do
 	settimer 2 0
+	setvar $wifiled = 0
+	gpio_out 4 $wifiled
 
 % Now the MQTT client init, this is done each time the client connects
 on mqttconnect
