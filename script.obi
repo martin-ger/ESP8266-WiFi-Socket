@@ -39,6 +39,11 @@ on wificonnect
 do
 	settimer 2 1000
 
+% If we get the wifidisconnect stop blinking
+on wifidisconnect
+do
+	settimer 2 0
+
 % Now the MQTT client init, this is done each time the client connects
 on mqttconnect
 do
