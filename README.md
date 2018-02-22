@@ -40,7 +40,7 @@ The device has the following pin assignment:
 - GPIO12 - Relay on (LOW pulse)
 - GPIO14 - Push Button
 
-In this repository you find a basic Arduino sketch that reads the pushbutton and connects to an MQTT server.
+In this repository you find a basic Arduino sketch that reads the pushbutton and connects to an MQTT server (https://github.com/martin-ger/ESP8266-WiFi-Socket/blob/master/OBISocket.ino).
 
 There is also a sample script for my MQTT Broker/Bridge that turns the switch into an MQTT client and broker.
 
