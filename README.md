@@ -40,6 +40,8 @@ The device has the following pin assignment:
 - GPIO12 - Relay on (LOW pulse)
 - GPIO14 - Push Button
 
+It is reported that when holding GPIO12 LOW, the Relay can also be switched by simply turning GPIO5 HIGH and LOW. There is a Tasmota mapping that uses these settings: https://github.com/arendst/Sonoff-Tasmota/issues/1988
+
 ### Arduino Sketch
 In this repository you find a basic Arduino sketch that reads the pushbutton and connects to an MQTT server (https://github.com/martin-ger/ESP8266-WiFi-Socket/blob/master/OBISocket.ino). Find the basic WiFi and MQTT config in first lines of the sketch.
 
