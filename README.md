@@ -9,7 +9,7 @@ and a relay in a socket case.
 <img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/IMG_20180221_160706_s.jpg">
 
 ## Hardware
-Opening the case is somewhat tricky as they used deep lying "never-seen-before-screws", but with a little bit of drilling I managed it:
+Opening the case is somewhat tricky as they used deep lying "never-seen-before-screws" ("tri-star"), but with a little bit of drilling I managed it. The main board has the relay, the button, two LEDs, the power supply (the low voltage part of my modul runs at about 6.5V), an LDO 3.3V voltage regulator, and an ESP8266 on a separate daughter board:
 
 <img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/IMG_20180221_130652_s.jpg">
 
@@ -17,7 +17,7 @@ You can nicely read the names of the ESP pins on the daughter board:
 
 <img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/IMG_20180221_131028_s.jpg">
 
-It uses an ESP modul named "OW8266-02Q" (anybody an idea about its pinout?):
+The ESP modul is named "OW8266-02Q" (anybody an idea about its pinout?):
 
 <img src="https://raw.githubusercontent.com/martin-ger/ESP8266-WiFi-Socket/master/IMG_20180329_082642_s.jpg">
 
