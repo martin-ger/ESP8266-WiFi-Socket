@@ -17,7 +17,7 @@ You can nicely read the names of the ESP pins on the daughter board:
 
 <img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/IMG_20180221_131028_s.jpg">
 
-It uses an ESP modul named "OW8266-Q2" (anybody an idea about its pinout?):
+It uses an ESP modul named "OW8266-02Q" (anybody an idea about its pinout?):
 
 <img src="https://raw.githubusercontent.com/martin-ger/ESP8266-WiFi-Socket/master/IMG_20180329_082642_s.jpg">
 
