@@ -17,7 +17,7 @@ You can nicely read the names of the ESP pins on the daughter board:
 
 <img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/IMG_20180221_131028_s.jpg">
 
-The ESP modul is named "OW8266-02Q" (anybody an idea about its pinout?):
+The ESP modul is named "OW8266-02Q" (anybody an idea about its pinout? - at least I found the ADC - by trial and error):
 
 <img src="https://raw.githubusercontent.com/martin-ger/ESP8266-WiFi-Socket/master/IMG_20180329_082642_s.jpg">
 
