@@ -104,9 +104,7 @@ void do_measurements(int n) {
   
       for (int i = 0; i < ADC_MAX+1; i++) {
         if (vals[i] != 0) {
-          Serial.print(i);Serial.print(": ");
-          Serial.print(vals[i]);Serial.println(" ");
-
+          // filter out noise around zero
           if (abs(i-adc_avr) > 2) {
             U = ((float)(i - adc_avr))/1024 *5000;
             Sum_U_Square += U*U*vals[i]; 
