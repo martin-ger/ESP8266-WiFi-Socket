@@ -187,7 +187,9 @@ void setup(void){
   client.setServer(mqtt_server, 1883);
   client.setCallback(mqttCallback);
 
+#ifdef ENABLE_POWER_MEASUREMENT
   time_m = millis();
+#endif
 }
 
 void loop(void){
