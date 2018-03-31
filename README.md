@@ -46,8 +46,19 @@ The device has the following pin assignment:
 
 It is reported that when holding GPIO12 LOW, the Relay can also be switched by simply turning GPIO5 HIGH and LOW. There is a Tasmota mapping that uses these settings: https://github.com/arendst/Sonoff-Tasmota/issues/1988
 
+### Power Measurement
+Up to now the socket is somewhat smart. But there is plenty of space left in the case, so I decided to make it really smart and add a power measurement. I used an ACS712 hall effect current sensor that converts current values into voltage. I used the 5A version. The ACS712 has to be powered with 5V, so it needs an additional AMS1117-5 voltage regulator. The output of the ACS712 is in the range from 0-5V (with a 0 offset of 2.5V, i.e. if there is no current, the output is 2.5V). Before feeding it into the ESP's ADC it has to be divided with two resistors to 1V max.:
+ 
+<img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/IMG_20180331_085945_445.jpg">
+
+When you are using WiFi, make sure to set wifi_set_sleep_type(NONE_SLEEP_T), otherwise the ADC will produce some more random noise. The Arduino sketch will do the job for a ACS712 with max current of 5A and 230V. It computes the effective voltage by integrating over a multiple of the period and computes the current and the power consumption since the start of the sketch. These values are published via MQTT and can be fed e.g. in NodeRed:
+
+<img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/Sceenshot_NodeRed.jpg">
+
 ### Arduino Sketch
 In this repository you find a basic Arduino sketch that reads the pushbutton and connects to an MQTT server (https://github.com/martin-ger/ESP8266-WiFi-Socket/blob/master/OBISocket.ino). Find the basic WiFi and MQTT config in first lines of the sketch.
+
+If you define ENABLE_POWER_MEASUREMENT power mearurement with the will be included ACS712.
 
 ### MQTT Broker Script
 There is also a sample script for my MQTT Broker/Bridge, an alternative firmware that turns the switch into a OTA programmable MQTT client and broker. For further instructions see: https://github.com/martin-ger/esp_mqtt
