@@ -58,7 +58,7 @@ When you are using WiFi, make sure to set wifi_set_sleep_type(NONE_SLEEP_T), oth
 ### Arduino Sketch
 In this repository you find a basic Arduino sketch that reads the pushbutton and connects to an MQTT server (https://github.com/martin-ger/ESP8266-WiFi-Socket/blob/master/OBISocket.ino). Find the basic WiFi and MQTT config in first lines of the sketch.
 
-If you define ENABLE_POWER_MEASUREMENT power mearurement with the will be included ACS712.
+If you enable the define of ENABLE_POWER_MEASUREMENT, power mearurement with the ACS712 will be included.
 
 ### MQTT Broker Script
 There is also a sample script for my MQTT Broker/Bridge, an alternative firmware that turns the switch into a OTA programmable MQTT client and broker. For further instructions see: https://github.com/martin-ger/esp_mqtt
