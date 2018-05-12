@@ -17,7 +17,7 @@ You can nicely read the names of the ESP pins on the daughter board:
 
 <img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/IMG_20180221_131028_s.jpg">
 
-The ESP modul is named "OW8266-02Q" (most probably the same as the WT8266-S1 "Wirelass Tag" http://www.seeedstudio.com/document/word/WT8266-S1%20DataSheet%20V1.0.pdf - at least I found the ADC - by trial and error):
+The ESP modul is named "OW8266-02Q" (most probably the same as the WT8266-S1 "Wireless Tag" http://www.seeedstudio.com/document/word/WT8266-S1%20DataSheet%20V1.0.pdf - at least I found the ADC - by trial and error):
 
 <img src="https://raw.githubusercontent.com/martin-ger/ESP8266-WiFi-Socket/master/IMG_20180329_082642_s.jpg">
 
@@ -58,7 +58,7 @@ When you are using WiFi, make sure to set wifi_set_sleep_type(NONE_SLEEP_T), oth
 ### Arduino Sketch
 In this repository you find a basic Arduino sketch that reads the pushbutton and connects to an MQTT server (https://github.com/martin-ger/ESP8266-WiFi-Socket/blob/master/OBISocket.ino). Find the basic WiFi and MQTT config in first lines of the sketch.
 
-If you enable the define of ENABLE_POWER_MEASUREMENT, power mearurement with the ACS712 will be included.
+If you enable the define of ENABLE_POWER_MEASUREMENT, power measurement with the ACS712 will be included.
 
 ### MQTT Broker Script
 There is also a sample script for my MQTT Broker/Bridge, an alternative firmware that turns the switch into a OTA programmable MQTT client and broker. For further instructions see: https://github.com/martin-ger/esp_mqtt
