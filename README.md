@@ -51,6 +51,9 @@ Up to now the socket is somewhat smart. But there is plenty of space left in the
  
 <img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/IMG_20180331_085945_445.jpg">
 
+You can get the 6,5V from here:
+<img src="https://raw.githubusercontent.com/martin-ger/ESP8266-WiFi-Socket/master/IMG_20181010_094654095s.jpg">
+
 Could be nicer, but it all fits into the case:
 <img src="https://raw.githubusercontent.com/martin-ger/ESP8266-WiFi-Socket/master/IMG_20180521_201028_s.jpg">
 
