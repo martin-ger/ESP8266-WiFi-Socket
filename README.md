@@ -52,9 +52,11 @@ Up to now the socket is somewhat smart. But there is plenty of space left in the
 <img src="https://raw.githubusercontent.com/martin-ger/WiFi-Socket/master/IMG_20180331_085945_445.jpg">
 
 You can get the 6,5V from here:
+
 <img src="https://raw.githubusercontent.com/martin-ger/ESP8266-WiFi-Socket/master/IMG_20181010_094654095s.jpg">
 
 Could be nicer, but it all fits into the case:
+
 <img src="https://raw.githubusercontent.com/martin-ger/ESP8266-WiFi-Socket/master/IMG_20180521_201028_s.jpg">
 
 When you are using WiFi, make sure to set wifi_set_sleep_type(NONE_SLEEP_T), otherwise the ADC will produce some more random noise. The Arduino sketch will do the job for a ACS712 with max current of 5A and 230V. It computes the effective voltage by integrating over a multiple of the period and computes the current and the power consumption since the start of the sketch. These values are published via MQTT and can be fed e.g. in NodeRed:
